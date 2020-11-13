@@ -1,0 +1,94 @@
+.AboutUs {
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+    transform: translateY(-5.5em);
+
+    &-phone {        
+        align-self: center;
+        align-content: center;
+        width: em(360);
+        height: em(519);          
+    }
+
+    &-title {
+        @include title-format;             
+    }
+
+    &-paragraph {
+        @include paragraph-format;                
+    }
+
+    @media screen and (min-width: 768px) {
+        display: grid;            
+        grid-template-columns: 5% 45% 45% 5%;
+        grid-template-rows: 20% 10% 70%;
+
+        &-phone {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            align-self: start;
+            justify-self: center;            
+        }
+
+        &-title {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            margin: 0;
+        }
+
+        .paragraphBlockOne {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            align-self: start;
+            margin: 0;
+        }
+
+        .paragraphBlockTwo {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            align-self: center;
+            transform: translateY(-2em);
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        
+        &-title {
+            font-size: em(48);
+        }
+
+        &-paragraph {
+            font-size: 16px;
+        }
+    }    
+
+    @media screen and (min-width: 1440px) {
+        &-phone {
+            width: em(457.6);
+            height: em(660); 
+            transform: translateY(-6em);
+            justify-self: end;
+        }
+        
+        &-title {            
+            margin-left: 50px;            
+        }
+
+        &-paragraph {
+            width: em(464);               
+        }
+
+        .paragraphBlockOne {
+            align-self: start;
+            margin-left: em(50);
+        }
+        .paragraphBlockTwo {
+            transform: translateY(-4em);
+            align-self: center;
+            grid-row: 3 / 4;
+            margin-left: em(50);
+        }
+    }
+}

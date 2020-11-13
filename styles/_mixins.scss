@@ -1,0 +1,94 @@
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;    
+}
+
+@mixin font-family ($type-font) {
+    @if $type-font == "sans-light" {
+        font-family: 'IBM Plex Sans', sans-serif;                
+        font-weight: 300;
+    }
+    @if $type-font == "sans" {
+        font-family: 'IBM Plex Sans', sans-serif;                
+        font-weight: 400;
+    }
+    @if $type-font == "sans-medium" {
+        font-family: 'IBM Plex Sans', sans-serif;                
+        font-weight: 500;
+    }
+
+    @if $type-font == "sans-semibold" {
+        font-family: 'IBM Plex Sans', sans-serif;                
+        font-weight: 600;
+    }
+
+    @if $type-font == "mono-light" {
+        font-family: 'IBM Plex Mono', monospace ;                
+        font-weight: 300;
+    }    
+    @if $type-font == "mono" {
+        font-family: 'IBM Plex Mono', monospace ;                
+        font-weight: 400;
+    }    
+    @if $type-font == "mono-medium" {
+        font-family: 'IBM Plex Mono', monospace ;                      
+        font-weight: 500; 
+    }
+}
+
+@mixin title-format {
+    font-size: em(36);
+    margin: 29px 16px 16px 16px;
+    line-height: 42px;
+    @include font-family ('sans-medium');  
+    color: rgba($color: #060A24, $alpha: 1.0);
+}
+
+@mixin paragraph-format {
+    font-size: em(14);
+    line-height: em(22);        
+    @include font-family("mono");
+    color: rgba($color:#060A24, $alpha: 1.0);
+    margin: 0 16px 16px 16px;
+}
+
+@mixin button {
+    margin-top: em(30); 
+    width: em(288);
+    height: em(48);
+    font-size: em(16);        
+    text-transform: uppercase;
+    text-align: center;
+    line-height: em(48);        
+    @include font-family("mono-medium");
+    background: rgba($color:  #00F3BB, $alpha: 1.0);        
+
+    &-link {                        
+        display: block;            
+        text-decoration: none;  
+        color: rgba($color: #060A24, $alpha: 1.0);                  
+        
+        &:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);                    
+            animation-name: textColor;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;                
+            @keyframes textColor {
+                from {
+                    color: rgba($color: #060A24, $alpha: 1.0);    
+                }                
+                to {
+                    color: rgba($color: #FFFFFF, $alpha: 1.0);                        
+                }
+            }
+        }
+    }
+}
+
+@mixin title-format-BittenCard {
+    position: relative;            
+    color: rgba($color: #FFFFFF, $alpha: 1.0);
+    @include font-family ('sans');        
+    font-size: em(36);
+    margin: em(35) 0 em(21) em(6);
+}

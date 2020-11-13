@@ -1,0 +1,114 @@
+.Episodes {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    margin-top: em(24);     
+    height: 1250px;        
+    flex-direction: column;    
+  
+
+    &-title {            
+        @include title-format-BittenCard;        
+    }      
+
+    &-diagonalUp{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10vw;        
+    }
+
+    &-diagonalDown{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+    }
+
+    &-spotify {
+        position: relative;
+        margin: 0 em(11) em(10) em(11);
+        display: block;        
+        width: 95%;
+        border: none;        
+    }    
+
+    @media screen and (min-width: 768px) {
+        height: em(800);
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 12% 5% repeat(2, 30%) 10%;        
+        gap: em(15) em(15);
+
+        &-title {                    
+            margin-top: 2px;
+            justify-self: start;
+            margin-left: 47px;            
+            grid-column:  1/ 2;
+            grid-row: 2 / 3;            
+        }      
+
+        &-spotify {
+            width: 90%;  
+            height: 100%;
+            margin: 0;          
+        }
+        
+        .SpotiOne {            
+            grid-column:  1/ 2;
+            grid-row: 3 / 4;
+            justify-self: end;
+            align-self: end;
+        }
+
+        .SpotiTwo {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            justify-self: start;
+            align-self: end;
+        }
+
+        .SpotiThree {
+            grid-column:  1/ 2;
+            grid-row: 4 / 5;
+            justify-self: end;              
+            align-self: start;
+        }
+
+        .SpotiFour {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+            justify-self: start;
+            align-self: start;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 880px; 
+        
+        &-spotify {
+            width: 480px;  
+            height: 232px;
+            margin: 0;          
+        }
+        &-title {            
+            font-size: em(48);            
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        height: 1042.6px;  
+        grid-template-rows: 5% 8% repeat(2, 23%) 10%;           
+        gap: em(70) em(70);
+
+        &-title {
+            margin: 40px 0 0 200px;
+            justify-self: start;            
+        }
+
+        &-spotify {
+            width: 584px;            
+            height: 232px;
+        }
+    }
+}

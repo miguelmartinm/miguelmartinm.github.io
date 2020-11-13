@@ -1,0 +1,157 @@
+ .Navigation {
+    display: flex;    
+    flex-wrap: wrap;         
+    justify-content: space-between;
+    align-items: center;
+    position: relative;     
+
+    &-logo {
+        display: inline-block;
+        width: em(24);
+        height: em(24);
+        padding: em(10) 0 em(10) em(16);
+
+        position: relative;
+    }
+        
+    &-items {     
+        position: absolute; 
+        z-index: 3;       
+        margin: 0;
+        top: em(44);
+        opacity: 94%;
+        padding-left: 0;    
+        height: em(224); 
+        width: em(320);       
+        background: #0000EC;
+        max-height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+    }
+        
+    &-link {         
+        position: relative;     
+        padding: em(18) 0 em(16) em(16);
+        display: block;      
+        color:#FFFFFF;                  
+        font-size: em(16);        
+        text-transform: uppercase;
+        text-decoration: none;                                                     
+        @include font-family("mono-light");        
+
+        &:hover {
+            color:  #0000EC;
+            background: #FFFFFF;       
+            border-radius: em(8) em(8);  
+            @include font-family("mono-medium");               
+            transition: color 0.6s, background 0.6s ease;                                  
+        }      
+    }
+
+    &-actionCross {
+        display: none;           
+    }
+    &-actionBars {        
+        width: em(14);
+        height: em(14);
+        padding-right: em(19);            
+        display: inline-block;        
+    }
+
+    &-hiddenCheckbox {
+        display: none;
+    }  
+    
+    &-hiddenCheckbox:checked ~ &-items {
+        max-height: 100vh;  
+        opacity: 94%;
+        position: absolute;  
+        top: em(44);  
+        z-index: 3;        
+    }
+
+    &-hiddenCheckbox:checked, &-link {        
+        &:hover {                      
+            position: relative;  
+            z-index: 4;
+            opacity: 1;                          
+        }        
+    }
+
+    &-hiddenCheckbox:checked ~ &-actionCross {        
+        display: inline-block;
+        width: em(14);
+        height: em(14);
+        padding-right: em(16);            
+    }
+
+    &-hiddenCheckbox:checked ~ &-actionBars {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {                
+        justify-content: space-between;    
+        height: em(60);    
+        position: static; 
+
+        &-hiddenCheckbox:checked ~ &-actionCross {
+            display: none;
+        }
+
+        &-actionBars {
+            display: none;             
+        }        
+    
+        &-logo {
+            display: inline-block;
+            width: em(30);
+            height: em(30);      
+            transition: all 0.4s ease;             
+        }
+    
+        &-hiddenCheckbox:checked ~ &-items {
+            max-height: 50px;            
+            width: initial;                   
+            background: #FFFFFF;                        
+            transition: none;
+            position: relative; 
+            top: 0;    
+        }
+
+        &-items {
+            max-height: 50px;            
+            width: initial;            
+            background: #FFFFFF;   
+            position: relative; 
+            top: 0;                        
+        }
+
+        &-item {
+            display: inline-block;                     
+        }        
+
+        &-link {
+            display: inline-block;            
+            color: rgba($color: #060A24, $alpha: 1.0);
+            padding: 1em;
+            margin: 0 em(5) 0 em(5);            
+
+            &:hover {                
+                border-radius: em(8) em(8);                     
+                color: rgba($color: #00F3BB, $alpha: 1.0);
+                text-decoration: line-through;  
+                @include font-family("mono-medium");                
+            }             
+
+            &:active {                                
+                color: rgba($color: #060A24, $alpha: 0.56);
+                @include font-family("mono-light");                
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: 0 em(79) 0 em(84);
+    }
+}

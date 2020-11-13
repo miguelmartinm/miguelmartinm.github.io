@@ -1,0 +1,87 @@
+.title  {    
+    display: flex;    
+    flex-direction: column;
+    
+    &-main {        
+        @include title-format;        
+    }
+    &-WordsBlockOne {
+        text-transform: capitalize;
+        margin: 0;
+    }
+    &-WordsBlockTwo {
+        text-decoration: line-through;
+        margin: 0;
+    }
+    &-WordsBlockThree {
+        display: block;        
+    }
+
+    &-paragraph {                       
+        @include paragraph-format;
+        max-width: 628px;
+    }
+    
+    .button {        
+        align-self: center;
+        @include button;
+        
+    }
+
+    @media screen and (min-width: 768px) {        
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 20% 35%;
+        gap: em(20) em(20);       
+        margin: em(50) 0 0 em(50);
+        
+        justify-content: center;
+
+        &-WordsBlockThree {
+            display: inline-block;            
+        }
+        
+        &-main {
+            margin: 0;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            justify-self: start;
+        }
+
+        &-paragraph {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin: 0;            
+        }
+
+        .button {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            justify-self: center;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {        
+
+        &-main {
+            font-size: em(64);
+        }
+
+        &-paragraph {
+            font-size: em(16);
+        }
+
+        .button {
+            font-size: em(18); 
+            width: em(226);
+            height: em(56); 
+            justify-self: start;
+            line-height: em(58);       
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin: em(120) 0 0 em(200);
+    }
+}
+

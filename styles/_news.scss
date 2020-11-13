@@ -1,0 +1,53 @@
+.News {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    margin-top: em(24);             
+    min-height: 100%;    
+    flex-direction: column;    
+    
+    &-title {    
+        text-align: center; 
+        @include title-format-BittenCard;
+    }
+    
+    .button {
+        position: relative;
+        align-self: center;     
+        margin-bottom: em(67);
+        @include button;        
+    }
+
+    &-diagonalUp{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10vw;        
+    }
+    
+    @media screen and (min-width: 768px) {
+        &-title {            
+            margin-top: em(45);
+        }
+    }
+    @media screen and (min-width: 1024px) {        
+        
+        &-title {
+            font-size: em(48);             
+        }
+
+        .button {            
+            font-size: em(18); 
+            width: em(345);
+            height: em(56); 
+            justify-self: start;
+            line-height: em(58);       
+        }
+    }
+
+    @media screen and (min-width: 1440px) {        
+        &-title {            
+            margin-top: 4em;
+        }        
+    }
+}

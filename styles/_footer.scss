@@ -1,0 +1,48 @@
+.Footer{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    margin-bottom: em(31);
+
+    &-textBottom {
+        width: 100%;        
+        text-align: center;
+        font-size: em(14);
+        line-height: 22px;
+        color: rgba($color: #060A24, $alpha: 1.0);
+        @include font-family('mono-medium');
+    }   
+
+    &-icon {
+        color: rgba($color: #060A24, $alpha: 1.0);
+        margin: em(16) em(17.5) 0 em(17.5);
+        text-decoration: none;
+        width: 16px;
+        height: 16px;
+        display: inline-block;         
+
+        &:hover {                        
+            transform: scale(2);
+            transition: 0.5s;
+            color: rgba($color:  #0000FE, $alpha: 1.0);                    
+        }    
+    }
+
+    @media screen and (min-width: 768px) {                
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 16px 0 16px;
+
+        &-textBottom {
+            display: inline;
+            max-width: 350px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: 0 100px 0 100px;   
+        &-textBottom {
+            font-size: em(16);
+        }     
+    }   
+}

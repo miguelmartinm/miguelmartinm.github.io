@@ -1,0 +1,103 @@
+.Interviews {    
+    display: flex;    
+    flex-wrap: wrap;    
+    
+    &-title {
+        @include title-format;  
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% repeat(3, 30%);
+
+        &-title {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            margin-left: 50px;
+        }
+
+        .Hopper {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .Bouman {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;  
+        }
+
+        .Hamilton {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        .Univac {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .Eniac {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;     
+        }
+
+        .Kare {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        &-title {
+            font-size: em(48);            
+            transform: translateY(-0.2em);
+        }
+    }
+
+    @media screen and (min-width: 1440px) {        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10% repeat(2, 44%);
+        
+        &-title {            
+            margin-left: 200px;            
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            align-self: center;
+        }
+
+        .Hopper {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .Bouman {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;  
+        }
+
+        .Hamilton {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .Univac {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        .Eniac {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;     
+        }
+
+        .Kare {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+    }
+}                                                        

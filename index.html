@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Channel</title>
+    <link rel="stylesheet" href="./styles/styles.css">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">    
+</head>
+
+<body>
+    <header>                
+            <nav class="Navigation">                
+                <img class="Navigation-logo" src="images/logo.svg" alt="logo redondeado formado por las letras bd blancas con fondo azul">
+
+                <input class="Navigation-hiddenCheckbox" type="checkbox" id="menu-flag">
+
+                <label class="Navigation-actionCross" for="menu-flag">  
+                    <i class="fa fa-times"></i>                      
+                </label>
+                <label class="Navigation-actionBars" for="menu-flag">  
+                    <i class="fa fa-bars"></i>                      
+                </label>
+
+                <ul class="Navigation-items">
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Episodes">episodios</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#AboutUs">nosotros</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Interviews">entrevistas</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Topics">tópicos</a></li>                        
+                </ul>                                
+            </nav>        
+    </header>
+
+    <section class="title">
+        <h1 class="title-main">
+        <span class="title-WordsBlockOne">hello</span> 
+        <span class="title-WordsBlockTwo">world</span>
+        <span class="title-WordsBlockThree">pale blue dot.</span>
+        </h1>
+
+        <p class="title-paragraph">Un podcast que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>        
+        <div class="button">
+            <a class="button-link" target="_blank" href="https://open.spotify.com/show/6w3lJ6KQ0vMbp0IAobXzEM?si=Qrzt3ESBSWijzZI0FC0tiQ">
+                conocé más
+            </a>
+        </div>
+    </section>
+    
+    <section class="Episodes">              
+        <svg class="Episodes-diagonalUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,0 100,0 0,100"/>
+        </svg>           
+          
+        <svg class="Episodes-diagonalDown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+        </svg>
+        
+        <h2 class="Episodes-title" id="Episodes">Episodios</h2>
+        
+        <iframe class="Episodes-spotify SpotiOne"  src="https://open.spotify.com/embed-podcast/episode/461HCX0L3o4GO4BwbtOkqT" width="100" height="232" allow="encrypted-media"></iframe>        
+        <iframe class="Episodes-spotify SpotiTwo" src="https://open.spotify.com/embed-podcast/episode/10m1knAKviCNOv8BR72STV" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify SpotiThree" src="https://open.spotify.com/embed-podcast/episode/57GJ09Pp7Gz4SWgHVTZe0K" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify SpotiFour" src="https://open.spotify.com/embed-podcast/episode/1KZ5HV2uUjFpAGCMqf7X71" width="100" height="232" allow="encrypted-media"></iframe>                
+    </section>
+
+    <section class="AboutUs">
+        <img class="AboutUs-phone" src="./images/phone.png" alt="teléfono The secret history of women in coding">        
+
+        <h2 class="AboutUs-title" id="AboutUs">De dónde venimos</h2>
+        <p class="AboutUs-paragraph paragraphBlockOne">
+            Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.
+        </p>
+
+        <p class="AboutUs-paragraph paragraphBlockTwo">
+            Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+        </p>        
+    </section>
+
+    <section class="Interviews">
+        <h2 class="Interviews-title" id="Interviews">
+            Invitadas/os estelares
+        </h2>
+
+        <img class="Interviews-image Hopper" src="./images/grace-hopper.png" alt="Fotografía de Grace Hopper">
+        <img class="Interviews-image Bouman" src="./images/Katie-Bouman.png" alt="Fotografía de Katie Bouman">
+        <img class="Interviews-image Hamilton" src="./images/Margaret_Hamilton.png" alt="Fotografía de Margaret Hamilton">
+        <img class="Interviews-image Univac" src="./images/Univac-1103.png" alt="Fotografía que representa el computador E.R.A.Univac 1103 en los 50s">
+        <img class="Interviews-image Eniac" src="./images/Eniac.png" alt="Operadoras de la computadora Eniac - el primer computador programable de propósito general del mundo">
+        <img class="Interviews-image Kare" src="./images/susan-kare.png" alt="Fotografía de Susan Kare">
+    </section>
+
+    <section class="Topics">        
+        <h2 class="Topics-title" id="Topics">
+            Alguno de nuestros temas
+        </h2>        
+        
+        <div class="Topics-images remote">
+            <img class="Topics-image" src="./images/icon1.svg" alt="Icono de tres archivos apuntnado a bloque haciendo referencia a trabajo remoto">
+            <h3 class="Topics-textImage">
+                Trabajo remoto
+            </h3>            
+        </div>
+
+        <div class="Topics-images programming">
+            <img class="Topics-image" src="./images/icon2.svg" alt="Icono de cabeza con engranaje haciendo referencia a repensar la programación">
+            <h3 class="Topics-textImage">
+                Repensando la programación
+            </h3>
+        </div>        
+
+        <div class="Topics-images codebase">            
+            <img class="Topics-image" src="./images/icon3.svg" alt="Icono de laptop haciendo referencia a bases del código">
+            <h3 class="Topics-textImage">
+                Bases del código
+            </h3>
+        </div>
+
+        <div class="Topics-images security">            
+            <img class="Topics-image" src="./images/icon4.svg" alt="Icono de circuito con base de datos integrada haciendo referencia a seguridad informática">
+            <h3 class="Topics-textImage">
+                Seguridad informática
+            </h3>
+        </div>
+    </section>
+
+    <section class="News">
+        <svg class="News-diagonalUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,0 100,0 0,100"/>
+        </svg> 
+
+        <h2 class="News-title">¿Querés las últimas novedades?</h2>
+        
+        <div class="button">
+            <a class="button-link" target="_blank" href="https://open.spotify.com/show/38fieckNwjpqWTtiPwiJ4i?si=C9GQX1JLRGyan8EnvFb5Aw">
+                Escuchá los episodios
+            </a>
+        </div>
+    </section>
+    
+    <footer class="Footer">
+        <h3 class="Footer-textBottom">&copy; 2019 - Hello blue pale dot</h3>
+
+        <div class="Footer-icons">
+            <a class="Footer-icon" href="https://www.spotify.com/co/" target="blank">
+                <i class="fab fa-spotify"></i>
+            </a>
+
+            <a class="Footer-icon" href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="Footer-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>            
+
+            <a class="Footer-icon" href="https://www.facebook.com" target="blank" >
+                <i class="fab fa-facebook"></i>
+            </a>
+            
+            <a class="Footer-icon" href="https://web.telegram.org/#/login" target="blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
